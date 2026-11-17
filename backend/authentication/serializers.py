@@ -80,16 +80,27 @@ class UserLoginSerializer(serializers.Serializer):
         login_input = attrs.get('username_or_email')
         password = attrs.get('password')
 
-        # Check if login_input is email or username
+        # Check if login_input matches username or email (robust handling if username contains '@')
         user = None
-        if '@' in login_input:
+
+        # 1. Attempt authentication directly as username
+        user = authenticate(username=login_input, password=password)
+
+        # 2. If not authenticated, attempt matching by email
+        if not user:
             try:
                 user_obj = User.objects.get(email__iexact=login_input)
                 user = authenticate(username=user_obj.username, password=password)
-            except User.DoesNotExist:
+            except (User.DoesNotExist, User.MultipleObjectsReturned):
                 user = None
-        else:
-            user = authenticate(username=login_input, password=password)
+
+        # 3. If still not authenticated, attempt case-insensitive username match
+        if not user:
+            try:
+                user_obj = User.objects.get(username__iexact=login_input)
+                user = authenticate(username=user_obj.username, password=password)
+            except (User.DoesNotExist, User.MultipleObjectsReturned):
+                user = None
 
         if not user:
             raise serializers.ValidationError({

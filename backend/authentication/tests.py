@@ -66,6 +66,30 @@ class AuthenticationAndApprovalTests(TestCase):
         self.assertIn('access', response.data)
         self.assertIn('refresh', response.data)
 
+    def test_login_with_username_containing_at_symbol(self):
+        """Login works when username itself contains an '@' character (e.g. demo@12122)"""
+        User.objects.create_user(
+            username='demo@12122',
+            email='demo1@gmail.com',
+            password='UserPassword123!',
+            approval_status=ApprovalStatus.APPROVED,
+        )
+        # Login using the username with '@'
+        res_username = self.client.post(reverse('auth_login'), {
+            "username_or_email": "demo@12122",
+            "password": "UserPassword123!"
+        })
+        self.assertEqual(res_username.status_code, status.HTTP_200_OK)
+        self.assertIn('access', res_username.data)
+
+        # Login using the email
+        res_email = self.client.post(reverse('auth_login'), {
+            "username_or_email": "demo1@gmail.com",
+            "password": "UserPassword123!"
+        })
+        self.assertEqual(res_email.status_code, status.HTTP_200_OK)
+        self.assertIn('access', res_email.data)
+
     def test_admin_pending_users_and_approval_flow(self):
         """Step 2: Admin reviews pending users & approves with email notification"""
         pending_user = User.objects.create_user(
