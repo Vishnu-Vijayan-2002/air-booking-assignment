@@ -6,3 +6,4 @@ export const bookingsApi = {
   createBooking: (bookingData) => api.post('/bookings/', bookingData),
   cancelBooking: (id) => api.post(`/bookings/${id}/cancel/`),
 };
+

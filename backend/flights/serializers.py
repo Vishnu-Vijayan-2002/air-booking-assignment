@@ -52,3 +52,4 @@ class FlightStatusUpdateSerializer(serializers.ModelSerializer):
         if value not in FlightStatus.values:
             raise serializers.ValidationError(f"Invalid status. Must be one of: {list(FlightStatus.values)}")
         return value
+

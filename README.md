@@ -286,3 +286,4 @@ python manage.py test
 - **Position:** Full Stack Engineer (React + Django/DRF)
 - **Submission Email:** [yuaisoftsolutions@gmail.com](mailto:yuaisoftsolutions@gmail.com)
 - **Engineered by:** Antigravity Full Stack AI Engineer
+

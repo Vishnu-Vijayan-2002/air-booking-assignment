@@ -157,3 +157,4 @@ export const LiveRadarWidget = ({ flightId, initialTelemetry }) => {
     </div>
   );
 };
+

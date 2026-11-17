@@ -230,7 +230,7 @@ export const MyTripsPage = () => {
                       </div>
                       <div className="flex justify-between pt-1 border-t border-slate-200">
                         <span className="text-slate-500 font-medium">Total Paid:</span>
-                        <span className="font-bold text-emerald-600">${booking.total_price}</span>
+                        <span className="font-bold text-emerald-600">₹{parseFloat(booking.total_price).toLocaleString('en-IN')}</span>
                       </div>
                     </div>
                   </div>
@@ -299,3 +299,4 @@ export const MyTripsPage = () => {
     </div>
   );
 };
+

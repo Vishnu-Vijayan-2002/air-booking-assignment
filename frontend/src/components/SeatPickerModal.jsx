@@ -214,3 +214,4 @@ export const SeatPickerModal = ({ currentSeat, currentClass, onSelectSeat, onClo
     </div>
   );
 };
+

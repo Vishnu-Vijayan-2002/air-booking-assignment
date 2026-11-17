@@ -14,3 +14,4 @@ urlpatterns = [
     path('me/', CurrentUserProfileView.as_view(), name='auth_me'),
     path('activation-emails/', ActivationEmailAuditView.as_view(), name='auth_activation_emails'),
 ]
+

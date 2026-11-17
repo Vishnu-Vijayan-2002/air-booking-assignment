@@ -286,3 +286,4 @@ export const RegisterPage = () => {
     </div>
   );
 };
+

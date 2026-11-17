@@ -20,7 +20,7 @@ export const FlightSearchPage = () => {
   const [date, setDate] = useState('');
   const [availableOnly, setAvailableOnly] = useState(true);
   const [selectedAirline, setSelectedAirline] = useState('');
-  const [maxPrice, setMaxPrice] = useState(1200);
+  const [maxPrice, setMaxPrice] = useState(100000);
   const [statusFilter, setStatusFilter] = useState('');
   const [sortBy, setSortBy] = useState('price_asc');
 
@@ -253,7 +253,7 @@ export const FlightSearchPage = () => {
                     setDate('');
                     setSelectedAirline('');
                     setStatusFilter('');
-                    setMaxPrice(1200);
+                    setMaxPrice(100000);
                     setAvailableOnly(true);
                     fetchFlights();
                   }}
@@ -267,13 +267,13 @@ export const FlightSearchPage = () => {
               <div>
                 <div className="flex justify-between items-center text-xs font-semibold text-slate-700 mb-2">
                   <span>Max Ticket Price</span>
-                  <span className="text-sky-600 font-bold">${maxPrice}</span>
+                  <span className="text-sky-600 font-bold">₹{parseInt(maxPrice).toLocaleString('en-IN')}</span>
                 </div>
                 <input
                   type="range"
-                  min="50"
-                  max="1500"
-                  step="25"
+                  min="2000"
+                  max="150000"
+                  step="1000"
                   value={maxPrice}
                   onChange={(e) => setMaxPrice(e.target.value)}
                   onMouseUp={fetchFlights}
@@ -467,3 +467,4 @@ export const FlightSearchPage = () => {
     </div>
   );
 };
+

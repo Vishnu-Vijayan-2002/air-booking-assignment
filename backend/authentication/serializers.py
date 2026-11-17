@@ -132,3 +132,4 @@ class ActivationEmailLogSerializer(serializers.ModelSerializer):
     class Meta:
         model = ActivationEmailLog
         fields = ['id', 'user', 'username', 'recipient_email', 'subject', 'body', 'sent_at', 'task_id', 'status']
+

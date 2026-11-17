@@ -125,3 +125,4 @@ class BookingCreateSerializer(serializers.ModelSerializer):
             )
 
         return booking
+

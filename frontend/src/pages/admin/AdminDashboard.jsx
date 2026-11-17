@@ -86,7 +86,7 @@ export const AdminDashboard = () => {
               <DollarSign className="w-5 h-5 text-emerald-500" />
             </div>
             <p className="text-3xl font-black text-slate-900 mt-2">
-              ${stats?.bookings?.total_revenue ? stats.bookings.total_revenue.toLocaleString() : '0'}
+              ₹{stats?.bookings?.total_revenue ? stats.bookings.total_revenue.toLocaleString('en-IN') : '0'}
             </p>
             <p className="text-[11px] text-emerald-600 mt-1 font-medium">
               {stats?.bookings?.confirmed ?? 0} confirmed simulated bookings
@@ -194,3 +194,4 @@ export const AdminDashboard = () => {
     </div>
   );
 };
+

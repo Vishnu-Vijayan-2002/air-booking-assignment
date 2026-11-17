@@ -37,7 +37,7 @@ export const PaymentModal = ({ bookingSummary, onConfirmPayment, onClose, isProc
         {/* Amount Summary */}
         <div className="p-6 bg-gradient-to-br from-sky-600 to-sky-700 text-white text-center">
           <p className="text-xs uppercase tracking-wider text-sky-200 font-semibold">Total Payable Amount</p>
-          <p className="text-4xl font-black mt-1">${bookingSummary?.total_price}</p>
+          <p className="text-4xl font-black mt-1">₹{bookingSummary?.total_price ? parseFloat(bookingSummary.total_price).toLocaleString('en-IN') : '0'}</p>
           <div className="mt-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs backdrop-blur-sm">
             <span>{bookingSummary?.flight?.origin_code} &rarr; {bookingSummary?.flight?.destination_code}</span>
             <span>&bull;</span>
@@ -138,7 +138,7 @@ export const PaymentModal = ({ bookingSummary, onConfirmPayment, onClose, isProc
               ) : (
                 <>
                   <CheckCircle2 className="w-5 h-5" />
-                  <span>Authorize & Pay ${bookingSummary?.total_price}</span>
+                  <span>Authorize & Pay ₹{bookingSummary?.total_price ? parseFloat(bookingSummary.total_price).toLocaleString('en-IN') : '0'}</span>
                 </>
               )}
             </button>
@@ -153,3 +153,4 @@ export const PaymentModal = ({ bookingSummary, onConfirmPayment, onClose, isProc
     </div>
   );
 };
+

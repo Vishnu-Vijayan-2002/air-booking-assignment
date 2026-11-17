@@ -7,3 +7,4 @@ export const authApi = {
   updateProfile: (profileData) => api.patch('/auth/me/', profileData),
   getActivationEmailLogs: () => api.get('/auth/activation-emails/'),
 };
+

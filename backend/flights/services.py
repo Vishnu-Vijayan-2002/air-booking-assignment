@@ -148,3 +148,4 @@ class FlightTrackingService:
             'is_live': True,
             'updated_at': now.isoformat(),
         }
+

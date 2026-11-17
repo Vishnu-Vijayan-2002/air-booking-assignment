@@ -172,7 +172,7 @@ export const AdminFlightManager = ({ onFlightUpdated }) => {
                     </td>
 
                     <td className="px-6 py-4">
-                      <p className="font-bold text-slate-900">${f.price}</p>
+                      <p className="font-bold text-slate-900">₹{parseFloat(f.price).toLocaleString('en-IN')}</p>
                       <p className="text-[11px] text-emerald-600 font-medium">
                         {f.available_seats} / {f.total_seats} avail.
                       </p>
@@ -365,12 +365,12 @@ export const AdminFlightManager = ({ onFlightUpdated }) => {
               {/* Pricing & Seats */}
               <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">Price ($)</label>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Price (₹)</label>
                   <input
                     type="number"
                     step="0.01"
                     required
-                    placeholder="499.00"
+                    placeholder="5499.00"
                     value={formData.price}
                     onChange={(e) => setFormData({ ...formData, price: e.target.value })}
                     className="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl"
@@ -428,3 +428,4 @@ export const AdminFlightManager = ({ onFlightUpdated }) => {
     </div>
   );
 };
+

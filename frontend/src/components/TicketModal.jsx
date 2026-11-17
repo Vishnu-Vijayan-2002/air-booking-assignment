@@ -141,7 +141,7 @@ export const TicketModal = ({ booking, onClose }) => {
               <span className="text-slate-400 uppercase font-semibold">Payment</span>
               <p className="text-sm font-bold text-emerald-600 mt-0.5 flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                {booking.payment_status} (${booking.total_price})
+                {booking.payment_status} (₹{parseFloat(booking.total_price).toLocaleString('en-IN')})
               </p>
             </div>
             <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
@@ -172,3 +172,4 @@ export const TicketModal = ({ booking, onClose }) => {
     </div>
   );
 };
+

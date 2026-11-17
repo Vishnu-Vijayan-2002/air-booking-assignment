@@ -114,7 +114,7 @@ class Command(BaseCommand):
                 'destination_longitude': -0.4543,
                 'departure_offset_hours': 2,
                 'duration_hours': 8.5,
-                'price': Decimal('649.00'),
+                'price': Decimal('54999.00'),
                 'total_seats': 210,
                 'available_seats': 42,
                 'status': FlightStatus.ON_TIME,
@@ -139,7 +139,7 @@ class Command(BaseCommand):
                 'destination_longitude': -73.7781,
                 'departure_offset_hours': -1.5, # Currently in flight!
                 'duration_hours': 14.0,
-                'price': Decimal('890.00'),
+                'price': Decimal('74500.00'),
                 'total_seats': 304,
                 'available_seats': 86,
                 'status': FlightStatus.ON_TIME,
@@ -164,7 +164,7 @@ class Command(BaseCommand):
                 'destination_longitude': -73.7781,
                 'departure_offset_hours': 5,
                 'duration_hours': 7.75,
-                'price': Decimal('520.00'),
+                'price': Decimal('43200.00'),
                 'total_seats': 250,
                 'available_seats': 110,
                 'status': FlightStatus.DELAYED,
@@ -190,7 +190,7 @@ class Command(BaseCommand):
                 'destination_longitude': 77.1000,
                 'departure_offset_hours': -3.0, # Currently in flight!
                 'duration_hours': 5.5,
-                'price': Decimal('430.00'),
+                'price': Decimal('35800.00'),
                 'total_seats': 253,
                 'available_seats': 18,
                 'status': FlightStatus.ON_TIME,
@@ -215,7 +215,7 @@ class Command(BaseCommand):
                 'destination_longitude': 72.8656,
                 'departure_offset_hours': 1,
                 'duration_hours': 2.2,
-                'price': Decimal('85.00'),
+                'price': Decimal('6499.00'),
                 'total_seats': 186,
                 'available_seats': 31,
                 'status': FlightStatus.BOARDING,
@@ -240,7 +240,7 @@ class Command(BaseCommand):
                 'destination_longitude': 77.1000,
                 'departure_offset_hours': 12,
                 'duration_hours': 7.5,
-                'price': Decimal('710.00'),
+                'price': Decimal('59200.00'),
                 'total_seats': 364,
                 'available_seats': 150,
                 'status': FlightStatus.SCHEDULED,
@@ -265,7 +265,7 @@ class Command(BaseCommand):
                 'destination_longitude': -118.4085,
                 'departure_offset_hours': 4,
                 'duration_hours': 5.8,
-                'price': Decimal('285.00'),
+                'price': Decimal('23500.00'),
                 'total_seats': 226,
                 'available_seats': 62,
                 'status': FlightStatus.ON_TIME,
@@ -290,7 +290,7 @@ class Command(BaseCommand):
                 'destination_longitude': 77.1000,
                 'departure_offset_hours': 8,
                 'duration_hours': 4.0,
-                'price': Decimal('380.00'),
+                'price': Decimal('31800.00'),
                 'total_seats': 327,
                 'available_seats': 95,
                 'status': FlightStatus.ON_TIME,
@@ -384,3 +384,4 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.SUCCESS(f"[+] Created Sample Booking: {b2.booking_reference} for {john_user.username}"))
 
         self.stdout.write(self.style.SUCCESS("\n==> Database seeding completed successfully!"))
+

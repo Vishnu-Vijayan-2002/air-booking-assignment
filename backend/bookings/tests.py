@@ -39,7 +39,7 @@ class FlightAndBookingTests(TestCase):
             destination_code='LHR',
             departure_time=now + timedelta(days=2),
             arrival_time=now + timedelta(days=2, hours=8),
-            price=Decimal('500.00'),
+            price=Decimal('45000.00'),
             total_seats=100,
             available_seats=10,
             status=FlightStatus.ON_TIME,

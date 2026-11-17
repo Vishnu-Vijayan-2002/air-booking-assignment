@@ -106,3 +106,4 @@ YUAI Soft Solutions Pvt. Ltd. / AirBooking Operations Team
         logger.warning(f"Failed to record ActivationEmailLog: {log_exc}")
 
     return True
+

@@ -12,3 +12,4 @@ urlpatterns = [
     path('<int:pk>/', FlightDetailView.as_view(), name='flight_detail'),
     path('<int:pk>/live-tracking/', LiveFlightTrackingView.as_view(), name='flight_live_tracking'),
 ]
+

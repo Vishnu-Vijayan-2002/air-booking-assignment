@@ -6,3 +6,4 @@ export const flightsApi = {
   getLiveTelemetry: (id) => api.get(`/flights/${id}/live-tracking/`),
   getAirports: () => api.get('/flights/airports/'),
 };
+

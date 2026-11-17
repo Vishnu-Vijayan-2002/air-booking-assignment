@@ -30,10 +30,10 @@ export const HomePage = () => {
   };
 
   const destinations = [
-    { city: 'London', code: 'LHR', country: 'United Kingdom', price: '520', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80' },
-    { city: 'New York', code: 'JFK', country: 'United States', price: '680', img: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=80' },
-    { city: 'Dubai', code: 'DXB', country: 'United Arab Emirates', price: '450', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80' },
-    { city: 'Singapore', code: 'SIN', country: 'Singapore', price: '420', img: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=600&q=80' },
+    { city: 'London', code: 'LHR', country: 'United Kingdom', price: '42,500', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80' },
+    { city: 'New York', code: 'JFK', country: 'United States', price: '64,000', img: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=80' },
+    { city: 'Dubai', code: 'DXB', country: 'United Arab Emirates', price: '28,500', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80' },
+    { city: 'Singapore', code: 'SIN', country: 'Singapore', price: '31,800', img: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=600&q=80' },
   ];
 
   return (
@@ -247,7 +247,7 @@ export const HomePage = () => {
                   </div>
                   <div className="text-right">
                     <span className="text-[10px] text-slate-400 block uppercase font-bold">From</span>
-                    <span className="font-black text-slate-900 text-lg">${d.price}</span>
+                    <span className="font-black text-slate-900 text-lg">₹{d.price}</span>
                   </div>
                 </div>
               </div>
@@ -258,3 +258,4 @@ export const HomePage = () => {
     </div>
   );
 };
+

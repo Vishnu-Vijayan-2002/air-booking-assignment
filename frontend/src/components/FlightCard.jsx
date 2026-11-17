@@ -88,7 +88,7 @@ export const FlightCard = ({ flight, onSelect, onOpenRadar }) => {
           <div className="text-left lg:text-right">
             <span className="text-xs text-slate-400 font-medium">Starting from</span>
             <p className="text-3xl font-black text-slate-900 leading-none">
-              ${flight.price}
+              ₹{parseFloat(flight.price).toLocaleString('en-IN')}
             </p>
             <span className="text-[11px] text-slate-400">per passenger</span>
           </div>
@@ -118,3 +118,4 @@ export const FlightCard = ({ flight, onSelect, onOpenRadar }) => {
     </div>
   );
 };
+

@@ -25,3 +25,4 @@ urlpatterns = [
     # Platform statistics
     path('stats/', AdminDashboardStatsView.as_view(), name='admin_dashboard_stats'),
 ]
+
