@@ -1,9 +1,20 @@
 @import "tailwindcss";
 
 @layer base {
-  body {
+  html, body {
     @apply bg-slate-50 text-slate-900 antialiased font-sans min-h-screen selection:bg-sky-500 selection:text-white;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    cursor: url('/airplane-cursor.svg') 3 3, auto;
+  }
+
+  /* Interactive clickable elements get the active jet cursor */
+  a, button, [role="button"], select, input[type="submit"], input[type="button"], input[type="checkbox"], input[type="radio"], .cursor-pointer {
+    cursor: url('/airplane-cursor-pointer.svg') 3 3, pointer !important;
+  }
+
+  /* Text inputs keep standard text cursor for usability */
+  input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="datetime-local"], input[type="tel"], input[type="number"], textarea {
+    cursor: text;
   }
 }
 

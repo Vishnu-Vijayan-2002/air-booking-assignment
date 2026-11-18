@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Glow & Shadow -->
+  <g filter="drop-shadow(1px 2px 3px rgba(14,165,233,0.5))">
+    <!-- Airplane Body pointing towards top-left (hotspot 3, 3) -->
+    <path d="M3 3 L25 11 L16 14 L20 23 L16.5 24.5 L12 17 L5.5 20 L3 3 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Cockpit glass highlight -->
+    <circle cx="7" cy="7" r="1.5" fill="#facc15" />
+    <!-- Wing highlight -->
+    <path d="M9 9 L15 11" stroke="#fef08a" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Jet contrail rings -->
+    <circle cx="21" cy="24" r="1.5" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="24" cy="27" r="1" fill="#bae6fd" opacity="0.5"/>
+  </g>
+</svg>
