@@ -1,24 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
   <defs>
     <filter id="hover-glow" x="-25%" y="-25%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#0284c7" flood-opacity="0.6"/>
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1.5" flood-color="#0284c7" flood-opacity="0.6"/>
     </filter>
   </defs>
-  <!-- White halo outline -->
-  <path d="M16 2 C14.9 2 14 3.1 14 4.5 L14 11.2 L1.8 15.6 C0.8 15.9 0.8 17.1 1.8 17.4 L14 16.2 L14 22.2 L9.8 24.6 C9.2 24.9 9.2 25.9 9.8 26.2 L14.3 26.5 L16 29.5 L17.7 26.5 L22.2 26.2 C22.8 25.9 22.8 24.9 22.2 24.6 L18 22.2 L18 16.2 L30.2 17.4 C31.2 17.1 31.2 15.9 30.2 15.6 L18 11.2 L18 4.5 C18 3.1 17.1 2 16 2 Z"
-        fill="#ffffff"
-        stroke="#ffffff"
-        stroke-width="3"
-        stroke-linejoin="round"
-        stroke-linecap="round"/>
-  <!-- Active Sky Blue silhouette on hover -->
-  <path d="M16 2 C14.9 2 14 3.1 14 4.5 L14 11.2 L1.8 15.6 C0.8 15.9 0.8 17.1 1.8 17.4 L14 16.2 L14 22.2 L9.8 24.6 C9.2 24.9 9.2 25.9 9.8 26.2 L14.3 26.5 L16 29.5 L17.7 26.5 L22.2 26.2 C22.8 25.9 22.8 24.9 22.2 24.6 L18 22.2 L18 16.2 L30.2 17.4 C31.2 17.1 31.2 15.9 30.2 15.6 L18 11.2 L18 4.5 C18 3.1 17.1 2 16 2 Z"
-        fill="#0284c7"
-        stroke="#0369a1"
-        stroke-width="1.2"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        filter="url(#hover-glow)"/>
-  <!-- Cockpit glass highlight -->
-  <circle cx="16" cy="6" r="1.2" fill="#ffffff" />
+  <!-- Airplane tilted to the left (~35 degrees) matching standard mouse pointer orientation -->
+  <g transform="translate(-4, -2) rotate(-35 16 16) scale(0.88)">
+    <!-- White halo outline -->
+    <path d="M16 2 C14.9 2 14 3.1 14 4.5 L14 11.2 L1.8 15.6 C0.8 15.9 0.8 17.1 1.8 17.4 L14 16.2 L14 22.2 L9.8 24.6 C9.2 24.9 9.2 25.9 9.8 26.2 L14.3 26.5 L16 29.5 L17.7 26.5 L22.2 26.2 C22.8 25.9 22.8 24.9 22.2 24.6 L18 22.2 L18 16.2 L30.2 17.4 C31.2 17.1 31.2 15.9 30.2 15.6 L18 11.2 L18 4.5 C18 3.1 17.1 2 16 2 Z"
+          fill="#ffffff"
+          stroke="#ffffff"
+          stroke-width="3"
+          stroke-linejoin="round"
+          stroke-linecap="round"/>
+    <!-- Active Sky Blue silhouette on hover -->
+    <path d="M16 2 C14.9 2 14 3.1 14 4.5 L14 11.2 L1.8 15.6 C0.8 15.9 0.8 17.1 1.8 17.4 L14 16.2 L14 22.2 L9.8 24.6 C9.2 24.9 9.2 25.9 9.8 26.2 L14.3 26.5 L16 29.5 L17.7 26.5 L22.2 26.2 C22.8 25.9 22.8 24.9 22.2 24.6 L18 22.2 L18 16.2 L30.2 17.4 C31.2 17.1 31.2 15.9 30.2 15.6 L18 11.2 L18 4.5 C18 3.1 17.1 2 16 2 Z"
+          fill="#0284c7"
+          stroke="#0369a1"
+          stroke-width="1.2"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+          filter="url(#hover-glow)"/>
+    <!-- Cockpit glass highlight -->
+    <circle cx="16" cy="6" r="1.3" fill="#ffffff" />
+  </g>
 </svg>
