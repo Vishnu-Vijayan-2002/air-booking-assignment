@@ -2,7 +2,23 @@ import React from 'react';
 import { Plane, Clock, ShieldCheck, ArrowRight, Compass, Users } from 'lucide-react';
 import { FlightStatusBadge } from './StatusBadge';
 
+const AIRLINE_THEMES = {
+  AI: { bg: 'bg-red-700', text: 'text-white', badge: 'bg-red-50 text-red-700 border-red-200' },
+  EK: { bg: 'bg-rose-900', text: 'text-white', badge: 'bg-rose-50 text-rose-700 border-rose-200' },
+  BA: { bg: 'bg-blue-900', text: 'text-white', badge: 'bg-blue-50 text-blue-700 border-blue-200' },
+  SQ: { bg: 'bg-amber-900', text: 'text-white', badge: 'bg-amber-50 text-amber-800 border-amber-200' },
+  '6E': { bg: 'bg-indigo-600', text: 'text-white', badge: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
+  LH: { bg: 'bg-slate-900', text: 'text-amber-400', badge: 'bg-amber-50 text-slate-800 border-amber-200' },
+  DL: { bg: 'bg-blue-950', text: 'text-white', badge: 'bg-blue-50 text-blue-700 border-blue-200' },
+  QR: { bg: 'bg-fuchsia-950', text: 'text-white', badge: 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200' },
+};
+
 export const FlightCard = ({ flight, onSelect, onOpenRadar }) => {
+  const theme = AIRLINE_THEMES[flight.airline_code] || {
+    bg: 'bg-slate-900',
+    text: 'text-white',
+    badge: 'bg-slate-50 text-slate-700 border-slate-200'
+  };
   const formatTime = (isoStr) => {
     if (!isoStr) return '';
     return new Date(isoStr).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -21,7 +37,7 @@ export const FlightCard = ({ flight, onSelect, onOpenRadar }) => {
           {/* Top row: Airline info & Status */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-black text-xs tracking-wider shadow-sm">
+              <div className={`w-11 h-11 rounded-2xl ${theme.bg} ${theme.text} flex items-center justify-center font-black text-xs tracking-wider shadow-md`}>
                 {flight.airline_code}
               </div>
               <div>

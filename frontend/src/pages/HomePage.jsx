@@ -62,6 +62,11 @@ export const HomePage = () => {
 
         <div className="max-w-5xl mx-auto text-center space-y-6 relative z-10">
 
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-200 text-xs font-semibold backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Live Airspace Monitoring &bull; OpenSky Network Transponder Feeds</span>
+          </div>
+
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
             Seamless Flight Bookings with <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-200 bg-clip-text text-transparent">
@@ -115,6 +120,29 @@ export const HomePage = () => {
                 </button>
               </div>
             </form>
+
+            {/* Quick Popular Route Chips */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-3 pt-3 text-xs">
+              <span className="text-slate-400 font-semibold text-[11px] uppercase tracking-wider">Popular Routes:</span>
+              {[
+                { o: 'DEL', d: 'BOM', label: 'Delhi ➔ Mumbai' },
+                { o: 'DEL', d: 'LHR', label: 'Delhi ➔ London' },
+                { o: 'DXB', d: 'JFK', label: 'Dubai ➔ New York' },
+                { o: 'SIN', d: 'DEL', label: 'Singapore ➔ Delhi' },
+              ].map((route) => (
+                <button
+                  key={route.label}
+                  type="button"
+                  onClick={() => {
+                    setOrigin(route.o);
+                    setDestination(route.d);
+                  }}
+                  className="px-3 py-1 rounded-full bg-white/10 hover:bg-sky-500/30 text-slate-200 hover:text-white border border-white/15 text-[11px] font-medium transition-colors"
+                >
+                  {route.label}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Quick Navigation Links */}
