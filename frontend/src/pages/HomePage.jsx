@@ -203,67 +203,6 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* AirBooking Special Feature Banner */}
-      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full pb-16">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-sky-900 via-sky-800 to-indigo-950 text-white p-8 sm:p-12 shadow-2xl border border-sky-700/50">
-          {/* Decorative Flight Trail and Clouds */}
-          <div className="absolute -right-10 -bottom-10 w-96 h-96 rounded-full bg-sky-500/10 blur-3xl pointer-events-none"></div>
-          <div className="absolute top-4 right-12 opacity-15 hidden lg:block pointer-events-none">
-            <Plane className="w-64 h-64 -rotate-12" />
-          </div>
-
-          <div className="relative z-10 max-w-2xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-sky-200 text-xs font-bold border border-white/20 backdrop-blur-sm">
-              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-              <span>AirBooking AeroPass Privilege</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight">
-              Fly Beyond Horizons With <br className="hidden sm:inline" />
-              Guaranteed Seat Inventory
-            </h2>
-
-            <p className="text-sm text-slate-300 leading-relaxed">
-              Enjoy seamless travel booking with instant electronic boarding passes, interactive seat layout maps, zero convenience fees on UPI, and live OpenSky Network transponder tracking.
-            </p>
-
-            {/* Feature Pills */}
-            <div className="flex flex-wrap gap-2 pt-2 text-xs">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 border border-white/15 text-slate-200">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                Instant Boarding Pass
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 border border-white/15 text-slate-200">
-                <Compass className="w-3.5 h-3.5 text-sky-300" />
-                Live ADS-B Radar
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 border border-white/15 text-slate-200">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-300" />
-                Admin-Verified Security
-              </span>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="pt-4 flex flex-wrap items-center gap-3">
-              <Link
-                to="/flights"
-                className="px-6 py-3 rounded-2xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-black text-xs transition-all shadow-lg shadow-sky-500/25 flex items-center gap-2 hover:scale-[1.02]"
-              >
-                <Plane className="w-4 h-4 -rotate-45" />
-                <span>Search Flights Now</span>
-              </Link>
-              <Link
-                to="/live-radar"
-                className="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 transition-all flex items-center gap-2"
-              >
-                <Compass className="w-4 h-4 text-sky-400" />
-                <span>Track Live Airspace</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Featured Destinations */}
       <section className="bg-slate-100/70 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-8">

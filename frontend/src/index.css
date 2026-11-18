@@ -4,12 +4,12 @@
   html, body {
     @apply bg-slate-50 text-slate-900 antialiased font-sans min-h-screen selection:bg-sky-500 selection:text-white;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    cursor: url('/airplane-cursor.svg') 3 3, auto;
+    cursor: url('/airplane-cursor.svg') 16 2, auto;
   }
 
   /* Interactive clickable elements get the active jet cursor */
   a, button, [role="button"], select, input[type="submit"], input[type="button"], input[type="checkbox"], input[type="radio"], .cursor-pointer {
-    cursor: url('/airplane-cursor-pointer.svg') 3 3, pointer !important;
+    cursor: url('/airplane-cursor-pointer.svg') 16 2, pointer !important;
   }
 
   /* Text inputs keep standard text cursor for usability */
