@@ -68,7 +68,7 @@ export const LoginPage = () => {
         </div>
 
         {/* Demo Quick-Fill Bar */}
-        <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200/80 space-y-2">
+        {/* <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200/80 space-y-2">
           <span className="text-[11px] uppercase font-bold text-slate-400 tracking-wider block text-center">
             Demo Credentials (Click to Auto-fill)
           </span>
@@ -96,7 +96,7 @@ export const LoginPage = () => {
               Pending User
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Pending Approval Notice */}
         {isPendingApproval && (
@@ -134,7 +134,7 @@ export const LoginPage = () => {
                 required
                 value={usernameOrEmail}
                 onChange={(e) => setUsernameOrEmail(e.target.value)}
-                placeholder="e.g. john_doe or john@example.com"
+                placeholder="e.g.john@example.com"
                 className="w-full px-4 py-3 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 focus:outline-none transition-all pl-10"
               />
               <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />

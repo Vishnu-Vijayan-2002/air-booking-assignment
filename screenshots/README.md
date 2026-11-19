@@ -15,3 +15,4 @@ Save application screenshots in this directory with the filenames referenced in 
 | `09_my_trips_management.png` | Passenger "My Trips" dashboard with booking cancellation |
 | `10_live_radar_telemetry.png` | OpenSky Network ADS-B real-time flight telemetry radar |
 | `11_admin_flight_operations.png` | Admin flight status management and live operational toggles |
+

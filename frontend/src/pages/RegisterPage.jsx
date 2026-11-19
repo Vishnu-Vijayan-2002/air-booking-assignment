@@ -140,7 +140,7 @@ export const RegisterPage = () => {
                 required
                 value={formData.last_name}
                 onChange={handleChange}
-                placeholder="Doe"
+                placeholder="j"
                 className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
               />
             </div>
@@ -157,7 +157,7 @@ export const RegisterPage = () => {
                 required
                 value={formData.username}
                 onChange={handleChange}
-                placeholder="john_doe"
+                placeholder="john"
                 className="w-full px-3.5 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none"
               />
               {errors.username && <p className="text-xs text-rose-600 mt-1">{errors.username[0]}</p>}
